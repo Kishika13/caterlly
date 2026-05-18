@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Catering Hero Section</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+<style>
+
+.slider{
+    overflow:hidden;
+    width:100%;
+    position:relative;
+}
+
+.slide-track{
+
+    display:flex;
+    gap:25px;
+
+    width:calc(250px * 20);
+
+    animation:scroll 40s linear infinite;
+}
+
+.slide{
+    width:220px;
+    flex-shrink:0;
+}
+
+.slide img{
+
+    width:100%;
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+
+    transition:0.4s;
+}
+
+.slide img:hover{
+    transform:scale(1.05);
+}
+
+@keyframes scroll{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(calc(-250px * 10));
+    }
+
+}
+.flip-card{
+
+   width:100%;
+   height:350px;
+
+   perspective:1000px;
+}
+
+.flip-card-inner{
+
+   position:relative;
+
+   width:100%;
+   height:100%;
+
+   transition:transform 0.8s;
+
+   transform-style:preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+
+   transform:rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back{
+
+   position:absolute;
+
+   width:100%;
+   height:100%;
+
+   top:0;
+   left:0;
+
+   border-radius:30px;
+
+   backface-visibility:hidden;
+
+   display:flex;
+
+   flex-direction:column;
+
+   justify-content:center;
+
+   align-items:center;
+
+   padding:20px;
+}
+
+.flip-card-front{
+
+   background:white;
+}
+
+.flip-card-front img{
+
+   width:220px;
+   height:220px;
+
+   object-fit:cover;
+
+   border-radius:50%;
+}
+
+.flip-card-back{
+
+   background:#111827;
+
+   color:white;
+
+   transform:rotateY(180deg);
+}
+
+.OIP.png-img{
+
+   transition:0.5s;
+}
+
+.food-img:hover{
+
+   transform:
+   perspective(1000px)
+   rotateY(15deg)
+   scale(1.05);
+}
+
+
+</style>
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+
+  <section class="py-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+
+    <div class=" container rounded-5 ">
+
+      <!-- NAVBAR -->
+
+      <nav class="navbar navbar-expand-lg px-4 py-3">
+
+        <div class="container-fluid">
+
+          <!-- Logo -->
+          <p class="navbar-brand fw-bold fs-3">
+            Caterly
+          </p>
+
+          <!-- Toggle -->
+          <button class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+          </button>
+
+          <!-- Menu -->
+          <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav mx-auto gap-lg-4">
+
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  About us
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Services
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Menu
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  About
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Events
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Contact
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+      <!-- HERO CONTENT -->
+
+      <div class="row align-items-center py-5">
+
+        <!-- LEFT FOOD -->
+        <div class="col-lg-3 text-center d-none d-lg-block">
+
+          <div class="mb-5">
+
+            <img 
+              src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=500&auto=format&fit=crop"
+              class="img-fluid rounded-circle"
+              alt=""
+            >
+
+          </div>
+
+          <div>
+
+            <img 
+              src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=500&auto=format&fit=crop"
+              class="img-fluid rounded-circle"
+              alt=""
+            >
+
+          </div>
+
+        </div>
+
+        <!-- CENTER CONTENT -->
+        <div class="col-lg-6 text-center">
+
+          <span class="badge text-bg-warning px-4 py-2 rounded-pill mb-4">
+            Premium Catering Services
+          </span>
+
+          <h1 class="display-2 fw-bold">
+
+            Bringing Flavor to Every
+            <span class="text-warning">
+              Occasion You Love
+            </span>
+
+          </h1>
+
+          <p class="lead my-4">
+
+            We craft exceptional culinary experiences
+            that transform every gathering into a truly
+            unforgettable celebration.
+
+          </p>
+
+          <!-- Buttons -->
+          <div class="d-flex justify-content-center gap-3 mb-5">
+
+            <button class="btn btn-warning rounded-pill px-4 py-2">
+              Book Catering
+            </button>
+
+            <button class="btn btn-outline-dark rounded-pill px-4 py-2">
+              View Menu
+            </button>
+
+          </div>
+
+          <!-- Bottom Info -->
+          <div class="d-flex justify-content-center gap-5">
+
+            <p>
+              Fresh Ingredients
+            </p>
+
+            <p>
+              Expert Chefs
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT FOOD -->
+        <div class="col-lg-3 text-center d-none d-lg-block">
+
+          <div class="mb-5">
+
+            <img 
+              src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=500&auto=format&fit=crop"
+              class="img-fluid rounded-circle"
+              alt=""
+            >
+
+          </div>
+
+          <div>
+
+            <img 
+              src="https://images.unsplash.com/photo-1529042410759-befb1204b468?q=80&w=500&auto=format&fit=crop"
+              class="img-fluid rounded-circle"
+              alt=""
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<!-- EXECUTIVE CHEF SECTION -->
+
+<section class="container py-5">
+
+  <div class="row align-items-center g-5">
+
+    <!-- LEFT SIDE -->
+    <div class="col-lg-6">
+
+      <div class="position-relative overflow-hidden rounded-5">
+
+        <!-- Main Image -->
+        <img 
+          src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop"
+          class="img-fluid w-100"
+          alt=""
+        >
+
+        <!-- Content Overlay -->
+        <div class="position-absolute bottom-0 start-0 p-4 text-white w-100">
+
+          <!-- Small Tag -->
+          <div class=" text-dark rounded-4 p-3 d-inline-block mb-3">
+
+            <small class="text-warning fw-bold text-uppercase">
+              Executive Chef
+            </small>
+
+            <h5 class="mb-0 text-light">
+              Marcus Wellington
+            </h5>
+
+          </div>
+
+          <!-- Text -->
+          <h4 class="fw-bold">
+            Exclusive Gourmet Burger
+          </h4>
+
+          <h1 class="fw-bold display-5">
+            Crafted by Chef
+            Marcus Wellington
+          </h1>
+
+          <!-- Button -->
+          <button class="btn btn-light rounded-pill px-4 mt-3">
+            Order Now
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="col-lg-6">
+
+      <!-- Heading -->
+      <p class="text-warning fw-bold text-uppercase">
+        Meet Our Chef
+      </p>
+
+      <h1 class="fw-bold display-5">
+
+        Meet Our 
+        <span class="text-warning">
+          Executive Chef
+        </span>
+
+      </h1>
+
+      <!-- Description -->
+      <p class="text-secondary lh-lg my-4">
+
+        With over a decade of culinary expertise,
+        Chef Marcus Wellington crafts gourmet experiences.
+        Trained in classical French cuisine and inspired by
+        global flavors, he creates unforgettable dishes that
+        tell a story.
+
+      </p>
+
+      <!-- Image Box -->
+      <div class="position-relative overflow-hidden rounded-5">
+
+        <!-- Image -->
+        <img 
+          src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1200&auto=format&fit=crop"
+          class="img-fluid w-100"
+          alt=""
+        >
+
+        <!-- Stats Card -->
+        <div class="position-absolute top-50 start-0 translate-middle-y bg-white shadow rounded-5 p-4 ms-3">
+
+          <!-- Item -->
+          <div class="d-flex align-items-center gap-3 mb-4">
+
+            <div class="bg-warning-subtle rounded-circle d-flex justify-content-center align-items-center"
+            style="width:50px; height:50px;">
+
+              <i class="bi bi-clock text-warning"></i>
+
+            </div>
+
+            <div>
+
+              <h4 class="fw-bold mb-0">
+                12+
+              </h4>
+
+              <small class="text-secondary">
+                Years Experience
+              </small>
+
+            </div>
+
+          </div>
+
+          <!-- Item -->
+          <div class="d-flex align-items-center gap-3 mb-4">
+
+            <div class="bg-warning-subtle rounded-circle d-flex justify-content-center align-items-center"
+            style="width:50px; height:50px;">
+
+              <i class="bi bi-graph-up-arrow text-warning"></i>
+
+            </div>
+
+            <div>
+
+              <h4 class="fw-bold mb-0">
+                500+
+              </h4>
+
+              <small class="text-secondary">
+                Events Served
+              </small>
+
+            </div>
+
+          </div>
+
+          <!-- Item -->
+          <div class="d-flex align-items-center gap-3">
+
+            <div class="bg-warning-subtle rounded-circle d-flex justify-content-center align-items-center"
+            style="width:50px; height:50px;">
+
+              <i class="bi bi-award text-warning"></i>
+
+            </div>
+
+            <div>
+
+              <h4 class="fw-bold mb-0">
+                98%
+              </h4>
+
+              <small class="text-secondary">
+                Client Satisfaction
+              </small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- WHY CHOOSE US SECTION -->
+
+<section class="container py-5"
+data-aos="fade-up">
+
+  <!-- Heading -->
+  <div class="text-center mb-5">
+
+    <h1 class="fw-bold display-5">
+
+      Why Choose 
+      <span class="text-warning">
+        Onionz?
+      </span>
+
+    </h1>
+
+    <p class="text-secondary">
+
+      Fresh Ingredients. Authentic Taste.
+      Total Customization.
+
+    </p>
+
+  </div>
+
+  <!-- Cards -->
+  <div class="row g-4">
+
+    <!-- CARD 1 -->
+    <div class="col-lg-4 col-md-6">
+
+      <div class="card border-3 shadow-lg rounded-5 p-4 h-100">
+
+        <!-- Icon -->
+        <div class="mb-4">
+
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png"
+            width="80"
+            alt=""
+          >
+
+        </div>
+
+        <!-- Content -->
+        <h2 class="fw-bold mb-3">
+
+          What Makes
+          Onionz Special
+
+        </h2>
+
+        <p class="text-secondary lh-lg">
+
+          We deliver more than just meals create ingredients,
+          homestyle cooking, and fully customizable menus
+          tailored to your taste.
+
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="col-lg-4 col-md-6 mx-auto">
+
+      <div class="card border-3 shadow-lg rounded-5 p-4 h-100">
+
+        <!-- Icon -->
+        <div class="mb-4">
+
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/415/415733.png"
+            width="80"
+            alt=""
+          >
+
+        </div>
+
+        <!-- Content -->
+        <h2 class="fw-bold mb-3">
+
+          Fresh & Quality
+          Ingredients
+
+        </h2>
+
+        <p class="text-secondary lh-lg">
+
+          We carefully select farm-fresh ingredients
+          to deliver rich flavor and wholesome
+          nutrition in every bite.
+
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="col-lg-4 col-md-6">
+
+      <div class="card border-3 shadow-lg rounded-5 p-4 h-100">
+
+        <!-- Icon -->
+        <div class="mb-4">
+
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/5787/5787100.png"
+            width="80"
+            alt=""
+          >
+
+        </div>
+
+        <!-- Content -->
+        <h2 class="fw-bold mb-3">
+
+          Customize Your
+          Own Menu
+
+        </h2>
+
+        <p class="text-secondary lh-lg">
+
+          Design your ideal dining experience with
+          customized dishes crafted to match your
+          taste and event.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- TRENDING SECTION -->
+
+<section class="container py-5"
+data-aos="fade-down">
+
+  <!-- Heading -->
+  <div class="text-center mb-5">
+
+    <h1 class="fw-bold display-5">
+      Trending This Week
+    </h1>
+
+    <p class="text-secondary">
+      See what everyone in Dhaka is loving right now.
+    </p>
+
+  </div>
+
+  <!-- Cards -->
+  <div class="row g-4">
+
+    <!-- CARD 1 -->
+    <div class="col-lg-4 col-md-6">
+
+      <div class="card border-0 shadow-sm rounded-5 overflow-hidden h-100">
+
+        <!-- Image -->
+        <div class="position-relative">
+
+          <img 
+            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200&auto=format&fit=crop"
+            class="img-fluid w-100"
+            alt=""
+          >
+
+          <!-- Badge -->
+          <span class="badge bg-danger position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">
+            Open
+          </span>
+
+          <!-- Offer -->
+          <div class="position-absolute bottom-0 start-0 p-3">
+
+            <h5 class="fw-bold mb-0">
+              20% OFF UPTO $80
+            </h5>
+
+          </div>
+
+        </div>
+
+        <!-- Card Body -->
+        <div class="card-body">
+
+          <!-- Title -->
+          <div class="d-flex justify-content-between align-items-center mb-1">
+
+            <h4 class="fw-bold mb-0">
+              Quinoa Buddha Bowl
+            </h4>
+
+            <small class="text-secondary">
+              Healthy
+            </small>
+
+          </div>
+
+          <!-- Info -->
+          <div class="d-flex flex-wrap gap-3 text-secondary small">
+
+            <span>
+              ⭐ 4.5 Rating
+            </span>
+
+            <span>
+              ⏱ Time 10-25 min
+            </span>
+
+            <span>
+              📍 0.2 km
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="col-lg-4 col-md-6">
+
+      <div class="card border-0 shadow-sm rounded-5 overflow-hidden h-100">
+
+        <!-- Image -->
+        <div class="position-relative">
+
+          <img 
+            src="atoast.webp"
+            class="img-fluid w-100"
+            alt=""
+          >
+
+          <!-- Badge -->
+          <span class="badge bg-danger position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">
+            Open
+          </span>
+
+          <!-- Offer -->
+          <div class="position-absolute bottom-0 start-0 text-white p-3">
+
+            <h5 class="fw-bold mb-0">
+              BUY 1 GET 1 FREE FOR TODAY
+            </h5>
+
+          </div>
+
+        </div>
+
+        <!-- Card Body -->
+        <div class="card-body">
+
+          <!-- Title -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+
+            <h4 class="fw-bold mb-0">
+              Avocado Toast
+            </h4>
+
+            <small class="text-secondary">
+              Burgers
+            </small>
+
+          </div>
+
+          <!-- Info -->
+          <div class="d-flex flex-wrap gap-3 text-secondary small">
+
+            <span>
+              ⭐ 4.9 Rating
+            </span>
+
+            <span>
+              ⏱ Time 30-45 min
+            </span>
+
+            <span>
+              📍 0.4 km
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="col-lg-4 col-md-6 mx-auto">
+
+      <div class="card border-0 shadow-sm rounded-5 overflow-hidden h-100">
+
+        <!-- Image -->
+        <div class="position-relative">
+
+          <img 
+            src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?q=80&w=1200&auto=format&fit=crop"
+            class="img-fluid w-100"
+            alt=""
+          >
+
+          <!-- Badge -->
+          <span class="badge bg-danger position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">
+            Open
+          </span>
+
+          <!-- Offer -->
+          <div class="position-absolute bottom-0 start-0 p-3">
+
+            <h5 class="fw-bold mb-0">
+              FLAT $40 OFF ON COMBO
+            </h5>
+
+          </div>
+
+        </div>
+
+        <!-- Card Body -->
+        <div class="card-body">
+
+          <!-- Title -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+
+            <h4 class="fw-bold mb-0">
+              Green Smoothie
+            </h4>
+
+            <small class="text-secondary">
+              Mexican
+            </small>
+
+          </div>
+
+          <!-- Info -->
+          <div class="d-flex flex-wrap gap-3 text-secondary small">
+
+            <span>
+              ⭐ 4.7 Rating
+            </span>
+
+            <span>
+              ⏱ Time 15-55 min
+            </span>
+
+            <span>
+              📍 0.9 km
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="py-5  overflow-hidden">
+  <div class="container text-center">
+
+    <div class="row justify-content-center align-items-center mb-5">
+
+      <!-- Left Side -->
+      <div class="col-lg-5 mb-5 mb-lg-0">
+
+        <h1 class="fw-bold text-start display-5 mb-5" data-aos="fade-left">
+          Master the Art of <br>
+          Cooking with 
+          <span class="text-warning">Confidence</span>
+        </h1>
+
+        <div class="d-flex align-items-center gap-3 flex-wrap">
+
+          <!-- Left Image -->
+          <div class="position-relative" data-aos="fade-right">
+
+            <img 
+              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop"
+              class="rounded-5 shadow"
+              style="width: 170px; height: 240px; object-fit: cover;"
+            >
+
+            <div class="position-absolute bottom-0 start-50 translate-middle-x mb-2 
+                         bg-opacity-75 px-3 py-1 rounded-pill small">
+              Easy to follow recipes
+            </div>
+
+          </div>
+          
+
+          <!-- Review Card -->
+          <div class=" rounded-5 shadow p-4 text-start" data-aos=fade-up"
+               style="width: 240px;">
+
+            <h3 class="fw-normal mb-4">
+              “Cooking has <br>
+              never been this <br>
+              easy!”
+            </h3>
+
+            <div class="d-flex align-items-center">
+
+              <img 
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                class="rounded-circle me-3"
+                style="width: 55px; height: 55px; object-fit: cover;"
+              >
+
+              <div>
+                <h6 class="mb-0">Samantha Lia</h6>
+                <small class="text-muted">Master chef 2026</small>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Middle Cards -->
+      <div class="col-lg-2 mb-4 mb-lg-0">
+
+        <div class="d-flex flex-column gap-3">
+
+          <div class="bg-white shadow-sm rounded-5 p-3 text-start" data-aos="fade-right">
+            <h6 class="mb-1">Achievement</h6>
+            <small class="text-muted">Cook 3 foods today</small>
+          </div>
+
+          <div class="bg-white shadow-sm rounded-5 p-3 text-start" data-aos="fade-left">
+            <h6 class="mb-1">Live Now</h6>
+            <small class="text-muted">Chef Mark Samantha</small>
+          </div>
+
+          <div class="bg-white shadow-sm rounded-5 p-3 text-start" data-aos="fade-right">
+            <h6 class="mb-1">Today's Recipe</h6>
+            <small class="text-muted">Spaghetti Bolognese</small>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right Side -->
+      <div class="col-lg-3" data-aos="fade-up">
+
+        <p class="small text-muted mb-4 text-start">
+          Explore step-by-step recipes from around the world
+          and turn every meal into a masterpiece.
+        </p>
+
+        <div class="position-relative d-inline-block">
+
+          <img 
+            src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800&auto=format&fit=crop"
+            class="rounded-5 shadow"
+            style="width: 260px; height: 340px; object-fit: cover;"
+          >
+
+          <div class="position-absolute bottom-0 start-0 text-white p-3 text-start">
+            <h3 class="fw-light">
+              Cook with <br>
+              Master Chefs
+            </h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bottom Gallery -->
+  <section class="py-5 overflow-hidden">
+
+  <div class="slider">
+
+    <div class="slide-track">
+
+      <!-- ORIGINAL IMAGES -->
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop">
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=800&auto=format&fit=crop">
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop">
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1528712306091-ed0763094c98?q=80&w=800&auto=format&fit=crop">
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=800&auto=format&fit=crop">
+      </div>
+
+      <!-- REPEAT SAME IMAGES AGAIN -->
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop">
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=800&auto=format&fit=crop">
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop">
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1528712306091-ed0763094c98?q=80&w=800&auto=format&fit=crop">
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=800&auto=format&fit=crop">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+</section>
+<section class="py-5 bg-light">
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <!-- Left Side -->
+      <div class="col-lg-4 mb-5 mb-lg-0">
+
+        <h1 class="fw-bold mb-4">
+          Frequently <br>
+          Asked 
+          <span class="text-warning">Questions</span>
+        </h1>
+
+        <div class="text-center">
+
+          <img 
+            src="OIP.jpeg"
+            class="img-fluid"
+            style="max-width: 280px;"
+          >
+
+        </div>
+
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="col-lg-8">
+
+        <div class="accordion" id="faqAccordion">
+
+          <!-- FAQ 1 -->
+          <div class="accordion-item border-0 shadow-sm rounded-4 mb-3 overflow-hidden">
+
+            <h2 class="accordion-header">
+
+              <button 
+                class="accordion-button fw-semibold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq1">
+
+                What type of cuisine do you offer?
+
+              </button>
+
+            </h2>
+
+            <div 
+              id="faq1"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body text-muted">
+
+                We specialize in a variety of delicious dishes including local favorites,
+                international cuisine, and chef-crafted signature meals made with fresh ingredients.
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item border-0 shadow-sm rounded-4 mb-3 overflow-hidden">
+
+            <h2 class="accordion-header">
+
+              <button 
+                class="accordion-button collapsed fw-semibold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq2">
+
+                Do you offer home delivery or takeaway?
+
+              </button>
+
+            </h2>
+
+            <div 
+              id="faq2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body text-muted">
+
+                Yes, we provide both home delivery and takeaway services.
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item border-0 shadow-sm rounded-4 mb-3 overflow-hidden">
+
+            <h2 class="accordion-header">
+
+              <button 
+                class="accordion-button collapsed fw-semibold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq3">
+
+                How can I make a reservation?
+
+              </button>
+
+            </h2>
+
+            <div 
+              id="faq3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body text-muted">
+
+                You can reserve a table through our website or by calling us directly.
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item border-0 shadow-sm rounded-4 mb-3 overflow-hidden">
+
+            <h2 class="accordion-header">
+
+              <button 
+                class="accordion-button collapsed fw-semibold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq4">
+
+                Do you have vegetarian or vegan options?
+
+              </button>
+
+            </h2>
+
+            <div 
+              id="faq4"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body text-muted">
+
+                Absolutely! We offer several vegetarian and vegan-friendly dishes.
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item border-0 shadow-sm rounded-4 mb-3 overflow-hidden">
+
+            <h2 class="accordion-header">
+
+              <button 
+                class="accordion-button collapsed fw-semibold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq5">
+
+                What are your opening hours?
+
+              </button>
+
+            </h2>
+
+            <div 
+              id="faq5"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body text-muted">
+
+                We are open daily from 10:00 AM to 11:00 PM.
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="accordion-item border-0 shadow-sm rounded-4 mb-3 overflow-hidden">
+
+            <h2 class="accordion-header">
+
+              <button 
+                class="accordion-button collapsed fw-semibold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq6">
+
+                Do you offer catering services for events?
+
+              </button>
+              
+
+            </h2>
+
+            <div 
+              id="faq6"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body text-muted">
+
+                Yes, we provide catering services for weddings, birthdays,
+                and corporate events.
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="accordion-item border-0 shadow-sm rounded-4 overflow-hidden">
+
+            <h2 class="accordion-header">
+
+              <button 
+                class="accordion-button collapsed fw-semibold"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq7">
+
+                Are your ingredients fresh and hygienic?
+
+              </button>
+
+            </h2>
+
+            <div 
+              id="faq7"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion">
+
+              <div class="accordion-body text-muted">
+
+                Yes, we use fresh ingredients and follow strict hygiene standards.
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- FOOD BANNER SECTION -->
+
+<section class="py-5">
+
+  <div class="container">
+
+    <div class="row align-items-center rounded-5 overflow-hidden shadow-lg">
+
+     <!-- LEFT FLIP CARD -->
+
+<div class="col-lg-3 p-4 bg-light">
+
+  <div class="flip-card">
+
+    <div class="flip-card-inner">
+
+      <!-- FRONT -->
+      <div class="flip-card-front text-center">
+
+        <img 
+          src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=800&auto=format&fit=crop"
+          class="img-fluid rounded-circle shadow mb-4"
+          style="width:220px; height:220px; object-fit:cover;"
+        >
+
+        <h2 class="fw-bold text-dark">
+          Smoky Chicken
+        </h2>
+
+      </div>
+
+      <!-- BACK -->
+      <div class="flip-card-back">
+
+        <h3 class="fw-bold mb-3">
+          Delicious Taste
+        </h3>
+
+        <p>
+          Crispy chicken with premium spices and smoky flavors.
+        </p>
+
+        <button class="btn btn-dark rounded-pill px-4">
+          Explore
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+      <!-- CENTER CONTENT -->
+      <div class="col-lg-6 text-center text-white py-5"
+      style="background:#2B2D42;">
+
+        <p class="text-uppercase text-info fw-bold mb-3">
+          Fast Delivery Service
+        </p>
+
+        <h1 class="fw-bold display-5 mb-4">
+
+          Fresh & Tasty Meals
+          Delivered To Your
+          <span class="text-info">
+            Doorstep
+          </span>
+
+        </h1>
+
+        <p class="text-light opacity-75 mb-5">
+
+          Discover premium flavors crafted by expert chefs
+          and enjoy restaurant-quality food from the comfort
+          of your home.
+
+        </p>
+
+        <button class="btn btn-info rounded-pill px-5 py-3 fw-bold">
+          Order Now
+        </button>
+
+      </div>
+
+     <!-- RIGHT FLIP CARD -->
+
+<div class="col-lg-3 p-4 text-white"
+style="background:#00B4D8;">
+
+  <div class="flip-card">
+
+    <div class="flip-card-inner">
+
+      <!-- FRONT -->
+      <div class="flip-card-front text-center">
+
+        <h2 class="fw-bold mb-4">
+          Seafood Bowl
+        </h2>
+
+        <img 
+src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9"
+class="img-fluid rounded-circle shadow food-img"
+style="width:220px; height:220px; object-fit:cover;"
+>
+        
+
+      </div>
+
+      <!-- BACK -->
+      <div class="flip-card-back">
+
+        <h3 class="fw-bold mb-3">
+          Fresh Seafood
+        </h3>
+
+        <p>
+          Premium seafood prepared with world-class ingredients.
+        </p>
+
+        <button class="btn btn-light rounded-pill px-4">
+          Order
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+    </div>
+
+  </div>
+
+</section>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+   AOS.init({
+      offset:150,
+      duration:1200,
+      once:true
+   });
+</script>
+</body>
+</html>
